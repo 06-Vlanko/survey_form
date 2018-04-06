@@ -1,0 +1,23 @@
+
+#wrapper {
+    width: 424px;
+}
+.green {
+    height: 50px;
+    padding: 10px;
+    background-color: lightgreen;
+    border: 2px solid black;
+
+}
+#info {
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 2px solid black;
+}
+tr:last-child {
+    height: 130px;
+    vertical-align: top;
+}
+form {
+}

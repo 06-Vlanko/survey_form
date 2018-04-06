@@ -1,0 +1,16 @@
+
+#wrapper {
+    width: 400px;
+}
+form {
+    border: 2px solid black;
+    padding: 10px;
+
+}
+label {
+    display: inline-block;
+    width: 130px;
+}
+select {
+    width: 100px;
+}

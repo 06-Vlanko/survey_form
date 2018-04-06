@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'survey/style_result.css' %}">
+        <title>Result</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p class="green">Thanks for submitting this form! You have submitted this form {{ request.session.redirects }} times now</p>
+            <div id='info'>
+                <p>Submitted Info</p>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td> {{ request.session.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Dojo Location:</td>
+                        <td>{{ request.session.location }}</td>
+                    </tr>
+                    <tr>
+                        <td>Favorite Language:</td>
+                        <td>{{ request.session.fav_lang }}</td>
+                    </tr>
+                    <tr>
+                        <td>Comment:</td>
+                        <td>{{ request.session.comment }}</td>
+                    </tr>
+                </table>
+                <form action="/">
+                    <input type="submit" value="Go Back">
+                </form>
+                <form action="/reset">
+                    <input type="submit" value="Reset">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
